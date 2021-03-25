@@ -1068,35 +1068,6 @@
 <div class="container-fluid">
 
   <div id="sparklis-view" class="panel-group">
-    <div id="query" class="panel panel-info">
-      <div class="panel-heading">
-	<h5 class="panel-title">
-	  <a data-toggle="collapse" data-target="#collapse-query">
-	    <span class="texte lang-en">Your query and its <span class="highlighted">current focus</span></span>
-	    <span class="texte lang-fr">Votre requête et son <span class="highlighted">focus actuel</span></span>
-	    <span class="texte lang-es">Tu consulta y su <span class="highlighted">foco actual</span></span>
-	    <span class="texte lang-nl">Uw query en zijn <span class="highlighted">huidige focus</span></span>
-
-	    <span class="texte lang-en"> (click on different parts of the query to change it)</span>
-	    <span class="texte lang-fr"> (cliquer sur différentes parties de la requêtes pour le changer)</span>
-	    <span class="texte lang-es"> (Haga clic sobre las diferentes partes de la consulta para cambiarlo)</span>
-	    <span class="texte lang-nl"> (Klik op verschillende delen van de query om deze te wijzingen)</span>
-	  </a>
-	</h5>
-      </div>
-      <div id="collapse-query" class="panel-collapse collapse in">
-	<div id="query-body" class="panel-body">
-	  <span class="tooltiped">
-	    <span class="tooltip lang-en">Click on a query element to change focus</span>
-	    <span class="tooltip lang-fr">Cliquer sur un élément de requête pour changer le focus</span>
-	    <span class="tooltip lang-es">Haga clic en un elemento de consulta para cambiar el foco</span>
-	    <span class="tooltip lang-nl">Klik op een query-element om de focus te wijzigen</span>
-	    <div id="lisql">
-	    </div>
-	  </span>
-	</div>
-      </div>
-    </div>
 
     <div id="increments" class="panel panel-info">
       <div class="panel-heading">
@@ -1124,111 +1095,6 @@
 	  -->
 
 	<div class="row">
-	  <div class="incr-box col-sm-4">
-	    <div class="panel panel-default">
-	      <div class="panel-heading">
-		<span class="texte lang-en">Types and Relations of</span>
-		<span class="texte lang-fr">Types et Relations de</span>
-		<span class="texte lang-es">Tipos y Relaciones de</span>
-		<span class="texte lang-nl">Typen en Relaties van</span>
-		<span class="focus-np">the thing</span>
-	      </div>
-	      <span class="tooltiped panel-body panel-body-incrs">
-		<span class="tooltip lang-en">Click a concept to insert in the query at the focus</span>
-		<span class="tooltip lang-fr">Cliquer un concept pour l'insérer au focus de la requête</span>
-		<span class="tooltip lang-es">Haga clic para insertar un concepto en el foco de la consulta</span>
-		<span class="tooltip lang-nl">Klik op een concept om deze toe te voegen aan de focus van de query</span>
-		<div class="row">
-		  <div class="col-xs-4 no-padding">
-		    <select id="select-properties" class="select-incrs form-control">
-		      <option value="matchesAll">matches all</option>
-		      <option value="matchesAny">matches any</option>
-		    </select>
-		  </div>
-		  <div class="tooltiped col-xs-8 no-padding">
-		    <span class="tooltip lang-en">Input keywords to filter concepts</span>
-		    <span class="tooltip lang-fr">Saisir des mots-clés pour filtrer les concepts</span>
-		    <span class="tooltip lang-es">Introduzca palabras clave para filtrar los conceptos</span>
-		    <span class="tooltip lang-nl">Voer trefwoorden in om concepten te filteren</span>
-		    <input id="pattern-properties" class="pattern-incrs form-control" type="text">
-		  </div>
-		</div>
-
-		<span class="tooltiped">
-		  <span class="tooltip lang-en">Click to activate multi-selection</span>
-		  <span class="tooltip lang-fr">Cliquer pour activer la multi-sélection</span>
-		  <span class="tooltip lang-es">Haga clic para activar la multiselección</span>
-		  <span class="tooltip lang-nl">Klik om multi-selectie te activeren</span>
-		  <button id="selection-properties-button" class="btn btn-default btn-xs btn-block selection-incrs-button">
-		    <span class="texte lang-en">multi-selection</span>
-		    <span class="texte lang-fr">multi-sélection</span>
-		    <span class="texte lang-es">multiselección</span>
-		    <span class="texte lang-nl">multi-selectie</span>
-		  </button>
-		</span>
-		<div id="selection-properties" class="selection-incrs" style="display:none">
-		  <span class="texte lang-en">Insert the</span>
-		  <span class="texte lang-fr">Insérer les</span>
-		  <span class="texte lang-es">Insertar los</span>
-		  <span class="texte lang-nl">Voeg de</span>
-		  <span class="selection-count"></span> 
-		  <span class="texte lang-en">selected items with</span>
-		  <span class="texte lang-fr">éléments sélectionnés avec</span>
-		  <span class="texte lang-es">elementos seleccionados con</span>
-		  <span class="texte lang-nl">geselecteerde items in met</span>
-		  <span id="selection-properties-items"></span>
-		</div>
-		<div id="list-properties" class="list-incrs css-treeview">
-		</div>
-	      </span>
-	      <div class="panel-footer">
-		<div class="container-fluid">
-		  <div class="row">
-		    <div class="col-xs-4 btn-group buttons-incrs">
-		      <span class="tooltiped btn btn-default btn-sm">
-			<span class="tooltip lang-en">Turn the hierarchy upside-down</span>
-			<span class="tooltip lang-fr">Retourner la hiérarchie à l'envers</span>
-			<span class="tooltip lang-es">Darle la vuelta a la jerarquía</span>
-			<span class="tooltip lang-nl">Breng de hiërarchie ondersteboven</span>
-			<input id="input-inverse-properties" class="input-inverse" type="checkbox">
-			<label for="input-inverse-properties" class="label-checked glyphicon glyphicon-chevron-up"></label>
-			<label for="input-inverse-properties" class="label-unchecked glyphicon glyphicon-chevron-down"></label>
-		      </span>
-		      <span id="button-expand-properties" type="button" class="tooltiped btn btn-default btn-sm">
-			<span class="tooltip lang-en">Expand all items</span>
-			<span class="tooltip lang-fr">Développer tous les éléments</span>
-			<span class="tooltip lang-es">Expandir todos los elementos</span>
-			<span class="tooltip lang-nl">Vouw alle items uit</span>
-			▼
-		      </span>
-		      <span id="button-collapse-properties" type="button" class="tooltiped btn btn-default btn-sm">
-			<span class="tooltip lang-en">Collapse all items</span>
-			<span class="tooltip lang-fr">Réduire tous les éléments</span>
-			<span class="tooltip lang-es">Contraer todos los elementos</span>
-			<span class="tooltip lang-nl">Alle items samenvouwen</span>
-			►
-		      </span>
-		    </div>
-		    <div class="col-xs-4 no-padding">
-		      <select id="select-sorting-properties" class="select-sorting-incrs form-control">
-			<!-- dynamically generated
-			<option value="frequency">decreasing frequency</option>
-			<option value="alphanum">alphanumeric order</option>
-			-->
-		      </select>
-		    </div>
-		    <div id="count-properties" class="col-xs-4 count-incrs pull-right">
-		      <span class="texte lang-en">No concept</span>
-		      <span class="texte lang-fr">Aucun concept</span>
-		      <span class="texte lang-es">Ningún concepto</span>
-		      <span class="texte lang-nl">Geen concept</span>
-		    </div>
-		  </div>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	
 	  <div class="incr-box col-sm-4">
 	    <div class="panel panel-default">
 	      <div class="panel-heading">
@@ -1355,71 +1221,6 @@
 	      </div>
 	    </div>
 	  </div>
-	
-	  <div class="incr-box col-sm-4">
-	    <div class="panel panel-default">
-	      <div class="panel-heading">
-		<span class="texte lang-en">Aggregations and Operators</span>
-		<span class="texte lang-fr">Agrégations et Opérateurs</span>
-		<span class="texte lang-es">Agregaciones y Operadores</span>
-		<span class="texte lang-nl">Aggregatien en Operatoren</span>
-	      </div>
-	      <span class="tooltiped panel-body panel-body-incrs">
-		<span class="tooltip lang-en">Click a modifier to insert in the query at the focus</span>
-		<span class="tooltip lang-fr">Cliquer un modifieur pour l'insérer au focus de la requête</span>
-		<span class="tooltip lang-es">Haga clic en un modificador para insertarlo en el foco de la consulta</span>
-		<span class="tooltip lang-nl">Klik op een modifier om deze toe te voegen aan de focus van de query</span>
-		<div class="row">
-		  <div class="col-xs-5 no-padding">
-		    <select id="select-modifiers" class="select-incrs form-control">
-		      <option value="matchesAll">matches all</option>
-		      <option value="matchesAny">matches any</option>
-		    </select>
-		  </div>
-		  <div class="tooltiped col-xs-7 no-padding">
-		    <span class="tooltip lang-en">Input keywords to filter modifiers</span>
-		    <span class="tooltip lang-fr">Saisir des mots-clés pour filtrer les modifieurs</span>
-		    <span class="tooltip lang-es">Introduzca palabras clave para filtrar los modificadores</span>
-		    <span class="tooltip lang-nl">Voer trefwoorden in om de modifiers te filteren</span>
-		    <input id="pattern-modifiers" class="pattern-incrs form-control" type="text">
-		  </div>
-		</div>		
-		<span class="tooltiped">
-		  <span class="tooltip lang-en">Click to activate multi-selection</span>
-		  <span class="tooltip lang-fr">Cliquer pour activer la multi-sélection</span>
-		  <span class="tooltip lang-es">Haga clic para activar la multiselección</span>
-		  <span class="tooltip lang-nl">Klik om multi-selectie te activeren</span>
-		  <button id="selection-modifiers-button" class="btn btn-default btn-xs btn-block selection-incrs-button">
-		    <span class="texte lang-en">multi-selection</span>
-		    <span class="texte lang-fr">multi-sélection</span>
-		    <span class="texte lang-es">multiselección</span>
-		    <span class="texte lang-nl">multi-selectie</span>
-		  </button>
-		</span>
-		<div id="selection-modifiers" class="selection-incrs" style="display:none">
-		  <span class="texte lang-en">Insert the</span>
-		  <span class="texte lang-fr">Insérer les</span>
-		  <span class="texte lang-es">Insertar los</span>
-		  <span class="texte lang-nl">Voeg de</span>
-		  <span class="selection-count"></span> 
-		  <span class="texte lang-en">selected items with</span>
-		  <span class="texte lang-fr">éléments sélectionnés avec</span>
-		  <span class="texte lang-es">artículos seleccionados con</span>
-		  <span class="texte lang-nl">geselecteerde items in met</span>
-		  <span id="selection-modifiers-items"></span>
-		</div>				
-		<div id="list-modifiers" class="list-incrs css-treeview">
-		</div>
-	      </span>
-	      <div id="count-modifiers" class="count-incrs panel-footer">
-		<span class="texte lang-en">No modifier</span>
-		<span class="texte lang-fr">Aucun modifieur</span>
-		<span class="texte lang-es">Ningún modificador</span>
-		<span class="texte lang-nl">Geen modifier</span>
-	      </div>
-	    </div>
-	  </div>
-
 	</div>
         </div>
       </div>
@@ -1565,6 +1366,213 @@
 	</div>
       </div>
     </div>
+
+	<div id="query-types-aggregations" class="d-flex">
+		<div id="query" class="panel panel-info col-sm-4">
+			<div class="panel-heading">
+		  <h5 class="panel-title">
+			<a data-toggle="collapse" data-target="#collapse-query">
+			  <span class="texte lang-en">Your query and its <span class="highlighted">current focus</span></span>
+			  <span class="texte lang-fr">Votre requête et son <span class="highlighted">focus actuel</span></span>
+			  <span class="texte lang-es">Tu consulta y su <span class="highlighted">foco actual</span></span>
+			  <span class="texte lang-nl">Uw query en zijn <span class="highlighted">huidige focus</span></span>
+	  
+			  <span class="texte lang-en"> (click on different parts of the query to change it)</span>
+			  <span class="texte lang-fr"> (cliquer sur différentes parties de la requêtes pour le changer)</span>
+			  <span class="texte lang-es"> (Haga clic sobre las diferentes partes de la consulta para cambiarlo)</span>
+			  <span class="texte lang-nl"> (Klik op verschillende delen van de query om deze te wijzingen)</span>
+			</a>
+		  </h5>
+			</div>
+			<div id="collapse-query" class="panel-collapse collapse in">
+		  <div id="query-body" class="panel-body">
+			<span class="tooltiped">
+			  <span class="tooltip lang-en">Click on a query element to change focus</span>
+			  <span class="tooltip lang-fr">Cliquer sur un élément de requête pour changer le focus</span>
+			  <span class="tooltip lang-es">Haga clic en un elemento de consulta para cambiar el foco</span>
+			  <span class="tooltip lang-nl">Klik op een query-element om de focus te wijzigen</span>
+			  <div id="lisql">
+			  </div>
+			</span>
+		  </div>
+			</div>
+		</div>
+		<div id="increments" class="panel panel-info" style="cursor: default; opacity: 1;">
+			<div class="panel-heading">
+		  <!--	<button id="show-hide-increments" class="btn btn-default btn-md"><span class="glyphicon glyphicon-collapse-up"></span></button> -->
+		  <h5 class="panel-title">
+			<a data-toggle="collapse" data-target="#collapse-increments"">
+			  <span class="texte lang-en" style="display: inline;">Sparklis suggestions to refine your query</span>
+			  <span class="texte lang-fr" style="display: none;">Suggestions de Sparklis pour affiner votre requête</span>
+			  <span class="texte lang-es" style="display: none;">Sugerencias de Sparklis para refinar tu consulta</span>
+			  <span class="texte lang-nl" style="display: none;">Sparklis suggesties om uw query te verfijnen</span>
+			</a>
+		  </h5>
+			</div>
+			<div id="collapse-increments" class="panel-collapse collapse in">
+		  <div id="increments-body" class="panel-body">
+			<!--
+			<div id="current-focus">
+			  <span class="texte lang-en">The current focus is </span>
+			  <span class="texte lang-fr">Le focus actuel est </span>
+			  <span class="texte lang-es">El foco actual es </span>
+			  <span class="texte lang-nl">De huidige focus is </span>
+			  <span class="increments-focus highlighted">the thing</span>
+			  <em>The following suggestions are relative to</em> ''<span class="focus-np">the thing</span>'' <em>(the focus entity) and the <span class="highlighted">highlighted subquery</span></em>
+			</div>
+			-->
+	  
+		  <div class="row">
+			<div class="incr-box col-sm-4">
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+			  <span class="texte lang-en" style="display: inline;">Types and Relations of</span>
+			  <span class="texte lang-fr" style="display: none;">Types et Relations de</span>
+			  <span class="texte lang-es" style="display: none;">Tipos y Relaciones de</span>
+			  <span class="texte lang-nl" style="display: none;">Typen en Relaties van</span>
+			  <span class="focus-np">the thing</span>
+				</div>
+				<span class="tooltiped panel-body panel-body-incrs" title="Click a concept to insert in the query at the focus">
+			  <span class="tooltip lang-en">Click a concept to insert in the query at the focus</span>
+			  <span class="tooltip lang-fr">Cliquer un concept pour l'insérer au focus de la requête</span>
+			  <span class="tooltip lang-es">Haga clic para insertar un concepto en el foco de la consulta</span>
+			  <span class="tooltip lang-nl">Klik op een concept om deze toe te voegen aan de focus van de query</span>
+			  <div class="row">
+				<div class="col-xs-4 no-padding">
+				  <select id="select-properties" class="select-incrs form-control"><option value="matchesAll">matches all of ..., ...</option><option value="matchesAny">matches one of ..., ...</option><option value="isExactly">is exactly ...</option><option value="startsWith">starts with ...</option><option value="endsWith">ends with ...</option></select>
+				</div>
+				<div class="tooltiped col-xs-8 no-padding" title="Input keywords to filter concepts">
+				  <span class="tooltip lang-en">Input keywords to filter concepts</span>
+				  <span class="tooltip lang-fr">Saisir des mots-clés pour filtrer les concepts</span>
+				  <span class="tooltip lang-es">Introduzca palabras clave para filtrar los conceptos</span>
+				  <span class="tooltip lang-nl">Voer trefwoorden in om concepten te filteren</span>
+				  <input id="pattern-properties" class="pattern-incrs form-control" type="text">
+				</div>
+			  </div>
+	  
+			  <span class="tooltiped" title="Click to activate multi-selection">
+				<span class="tooltip lang-en">Click to activate multi-selection</span>
+				<span class="tooltip lang-fr">Cliquer pour activer la multi-sélection</span>
+				<span class="tooltip lang-es">Haga clic para activar la multiselección</span>
+				<span class="tooltip lang-nl">Klik om multi-selectie te activeren</span>
+				<button id="selection-properties-button" class="btn btn-default btn-xs btn-block selection-incrs-button">
+				  <span class="texte lang-en" style="display: inline;">multi-selection</span>
+				  <span class="texte lang-fr" style="display: none;">multi-sélection</span>
+				  <span class="texte lang-es" style="display: none;">multiselección</span>
+				  <span class="texte lang-nl" style="display: none;">multi-selectie</span>
+				</button>
+			  </span>
+			  <div id="selection-properties" class="selection-incrs" style="display:none">
+				<span class="texte lang-en" style="display: inline;">Insert the</span>
+				<span class="texte lang-fr" style="display: none;">Insérer les</span>
+				<span class="texte lang-es" style="display: none;">Insertar los</span>
+				<span class="texte lang-nl" style="display: none;">Voeg de</span>
+				<span class="selection-count" transition="opacity .2s linear" style="opacity: 1;">0</span> 
+				<span class="texte lang-en" style="display: inline;">selected items with</span>
+				<span class="texte lang-fr" style="display: none;">éléments sélectionnés avec</span>
+				<span class="texte lang-es" style="display: none;">elementos seleccionados con</span>
+				<span class="texte lang-nl" style="display: none;">geselecteerde items in met</span>
+				<span id="selection-properties-items"><button id="incr34" class="btn btn-default btn-sm selection-increment"><span>...</span> <span class="modifier">and</span> <span>...</span></button> <button id="incr33" class="btn btn-default btn-sm selection-increment"><span>...</span> <span class="modifier">or</span> <span>...</span></button> </span>
+			  </div>
+			  <div id="list-properties" class="list-incrs css-treeview" transition="opacity .2s linear" style="cursor: default; opacity: 1;"><ul><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr30" class="increment valid-increment filterable-increment"><span>that</span> <span>is</span> <span>the</span> <span class="propURI" title="file:///home/ferre/data/ontologies/Kartu-verbs/Georgian_infinitive">Georgian Infinitive</span> <span class="modifier">of</span> <span>...</span><span class="frequency-entities" title="number of results matching this">4+</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr28" class="increment valid-increment filterable-increment"><span>that</span> <span>has</span> <span>a</span> <span class="propURI" title="http://www.w3.org/2000/01/rdf-schema#label">label</span><span class="frequency-entities" title="number of results matching this">4+</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr31" class="increment valid-increment"><span>that</span> <span>has</span> <span>a</span> <span class="modifier">relation</span> <span>to</span> <span>...</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr29" class="increment valid-increment"><span>that</span> <span>has</span> <span>a</span> <span class="modifier">relation</span> <span>from</span> <span>...</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr32" class="increment valid-increment filterable-increment"><span class="modifier">according to</span> <span>which</span> <span>there is</span> <span>...</span></span></li></ul></div>
+				</span>
+				<div class="panel-footer">
+			  <div class="container-fluid">
+				<div class="row">
+				  <div class="col-xs-4 btn-group buttons-incrs">
+					<span class="tooltiped btn btn-default btn-sm" title="Turn the hierarchy upside-down">
+				  <span class="tooltip lang-en">Turn the hierarchy upside-down</span>
+				  <span class="tooltip lang-fr">Retourner la hiérarchie à l'envers</span>
+				  <span class="tooltip lang-es">Darle la vuelta a la jerarquía</span>
+				  <span class="tooltip lang-nl">Breng de hiërarchie ondersteboven</span>
+				  <input id="input-inverse-properties" class="input-inverse" type="checkbox">
+				  <label for="input-inverse-properties" class="label-checked glyphicon glyphicon-chevron-up"></label>
+				  <label for="input-inverse-properties" class="label-unchecked glyphicon glyphicon-chevron-down"></label>
+					</span>
+					<span id="button-expand-properties" type="button" class="tooltiped btn btn-default btn-sm" title="Expand all items">
+				  <span class="tooltip lang-en">Expand all items</span>
+				  <span class="tooltip lang-fr">Développer tous les éléments</span>
+				  <span class="tooltip lang-es">Expandir todos los elementos</span>
+				  <span class="tooltip lang-nl">Vouw alle items uit</span>
+				  ▼
+					</span>
+					<span id="button-collapse-properties" type="button" class="tooltiped btn btn-default btn-sm" title="Collapse all items">
+				  <span class="tooltip lang-en">Collapse all items</span>
+				  <span class="tooltip lang-fr">Réduire tous les éléments</span>
+				  <span class="tooltip lang-es">Contraer todos los elementos</span>
+				  <span class="tooltip lang-nl">Alle items samenvouwen</span>
+				  ►
+					</span>
+				  </div>
+				  <div class="col-xs-4 no-padding">
+					<select id="select-sorting-properties" class="select-sorting-incrs form-control"><option value="frequency">decreasing frequency</option><option value="alphanum">alphanumeric order</option></select>
+				  </div>
+				  <div id="count-properties" class="col-xs-4 count-incrs pull-right" transition="opacity .2s linear" style="opacity: 1;">5+ items</div>
+				</div>
+			  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="incr-box col-sm-4">
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+			  <span class="texte lang-en" style="display: inline;">Aggregations and Operators</span>
+			  <span class="texte lang-fr" style="display: none;">Agrégations et Opérateurs</span>
+			  <span class="texte lang-es" style="display: none;">Agregaciones y Operadores</span>
+			  <span class="texte lang-nl" style="display: none;">Aggregatien en Operatoren</span>
+				</div>
+				<span class="tooltiped panel-body panel-body-incrs" title="Click a modifier to insert in the query at the focus">
+			  <span class="tooltip lang-en">Click a modifier to insert in the query at the focus</span>
+			  <span class="tooltip lang-fr">Cliquer un modifieur pour l'insérer au focus de la requête</span>
+			  <span class="tooltip lang-es">Haga clic en un modificador para insertarlo en el foco de la consulta</span>
+			  <span class="tooltip lang-nl">Klik op een modifier om deze toe te voegen aan de focus van de query</span>
+			  <div class="row">
+				<div class="col-xs-5 no-padding">
+				  <select id="select-modifiers" class="select-incrs form-control"><option value="matchesAll">matches all of ..., ...</option><option value="matchesAny">matches one of ..., ...</option></select>
+				</div>
+				<div class="tooltiped col-xs-7 no-padding" title="Input keywords to filter modifiers">
+				  <span class="tooltip lang-en">Input keywords to filter modifiers</span>
+				  <span class="tooltip lang-fr">Saisir des mots-clés pour filtrer les modifieurs</span>
+				  <span class="tooltip lang-es">Introduzca palabras clave para filtrar los modificadores</span>
+				  <span class="tooltip lang-nl">Voer trefwoorden in om de modifiers te filteren</span>
+				  <input id="pattern-modifiers" class="pattern-incrs form-control" type="text">
+				</div>
+			  </div>		
+			  <span class="tooltiped" title="Click to activate multi-selection">
+				<span class="tooltip lang-en">Click to activate multi-selection</span>
+				<span class="tooltip lang-fr">Cliquer pour activer la multi-sélection</span>
+				<span class="tooltip lang-es">Haga clic para activar la multiselección</span>
+				<span class="tooltip lang-nl">Klik om multi-selectie te activeren</span>
+				<button id="selection-modifiers-button" class="btn btn-default btn-xs btn-block selection-incrs-button disabled">
+				  <span class="texte lang-en" style="display: inline;">multi-selection</span>
+				  <span class="texte lang-fr" style="display: none;">multi-sélection</span>
+				  <span class="texte lang-es" style="display: none;">multiselección</span>
+				  <span class="texte lang-nl" style="display: none;">multi-selectie</span>
+				</button>
+			  </span>
+			  <div id="selection-modifiers" class="selection-incrs" style="display:none">
+				<span class="texte lang-en" style="display: inline;">Insert the</span>
+				<span class="texte lang-fr" style="display: none;">Insérer les</span>
+				<span class="texte lang-es" style="display: none;">Insertar los</span>
+				<span class="texte lang-nl" style="display: none;">Voeg de</span>
+				<span class="selection-count" transition="opacity .2s linear" style="opacity: 1;">0</span> 
+				<span class="texte lang-en" style="display: inline;">selected items with</span>
+				<span class="texte lang-fr" style="display: none;">éléments sélectionnés avec</span>
+				<span class="texte lang-es" style="display: none;">artículos seleccionados con</span>
+				<span class="texte lang-nl" style="display: none;">geselecteerde items in met</span>
+				<span id="selection-modifiers-items"></span>
+			  </div>				
+			  <div id="list-modifiers" class="list-incrs css-treeview" transition="opacity .2s linear" style="opacity: 1;"><ul><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr17" class="increment valid-increment filterable-increment" title="Group results for each value of this entity"><span>for</span> <span>each</span> <span class="propURI" title="file:///home/ferre/data/ontologies/Kartu-verbs/Georgian_infinitive">Georgian Infinitive</span> <span>give me</span> <span>...</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr18" class="increment valid-increment filterable-increment" title="Aggregate the focus column in the table of results"><span>give me</span> <span>the</span> <span class="function">number</span> <span class="modifier">of</span> <span class="propURI" title="file:///home/ferre/data/ontologies/Kartu-verbs/Georgian_infinitive">Georgian Infinitive</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr15" class="increment valid-increment filterable-increment" title="Aggregate the focus column in the table of results"><span>give me</span> <span>a</span> <span class="modifier">sample</span> <span class="modifier">of</span> <span class="propURI" title="file:///home/ferre/data/ontologies/Kartu-verbs/Georgian_infinitive">Georgian Infinitive</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr20" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="highlighted">___</span> <span class="function">if</span> ___ <span class="function">else</span> ___</span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr13" class="increment valid-increment filterable-increment" title="Apply the function to the current focus">___ <span class="function">if</span> ___ <span class="function">else</span> <span class="highlighted">___</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr11" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="highlighted">___</span> <span>is</span> <span>a</span> <span class="function">blank node</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr10" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="highlighted">___</span> <span>is</span> <span>a</span> <span class="function">IRI</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr8" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="highlighted">___</span> <span>is</span> <span>a</span> <span class="function">literal</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr19" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="highlighted">___</span> <span>is</span> <span>a</span> <span class="function">number</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr9" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="highlighted">___</span> <span>is</span> <span class="function">bound</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr12" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="function">now</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr16" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span>the</span> <span class="function">string</span> <span>of</span> <span class="highlighted">___</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr14" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span>the</span> <span class="function">IRI</span> <span class="highlighted">___</span></span></li><li class="col-xs-11"><label style="visibility:hidden;">►&nbsp;</label><span id="incr7" class="increment valid-increment filterable-increment" title="Apply the function to the current focus"><span class="function">today</span></span></li></ul></div>
+				</span>
+				<div id="count-modifiers" class="count-incrs panel-footer" transition="opacity .2s linear" style="opacity: 1;">14 items</div>
+			  </div>
+			</div>
+		  </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 
