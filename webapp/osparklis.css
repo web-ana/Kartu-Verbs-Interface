@@ -433,10 +433,21 @@ input:checked + .slider:before {
     -------------------------------------------------------
 */
 
+
+
 #query {
     padding: 0;
 }
 
 #query-types-aggregations #increments h5 a {
     margin-left: 1em;
+}
+
+#nav-search {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.nav-middle {
+    margin-left: 30em;
 }

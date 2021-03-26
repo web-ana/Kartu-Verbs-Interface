@@ -152,8 +152,8 @@
 	      </li>
 	    </ul>
 	  </li>
-
-	  <li>      
+	  <!-- display:none -->
+	  <li style="display: none;">      
 	    <span class="navbar-form">
 	      <span class="tooltiped">
 		<span class="tooltip lang-en">Enter here the URL of the desired SPARQL endpoint</span>
@@ -172,8 +172,8 @@
 	      </span>
 	    </span>
 	  </li>
-
-	  <li>
+	  <!-- display:none -->
+	  <li style="display: none;">
 	    <span class="tooltiped">
 	      <span class="tooltip lang-en">Click here to edit the title of the endpoint</span>
 		<span class="tooltip lang-fr">Cliquer ici pour éditer le titre du point d'accès</span>
@@ -185,6 +185,15 @@
 	    </span>
 	  </li>
 	</ul>
+	
+	<div class="container-fluid col-sm-4 nav-middle">
+		<form id="nav-search" class="d-flex">
+			<input class="form-control me-2" type="search" placeholder="Type here ..." aria-label="Search">
+			<button class="btn btn-outline-success" type="submit">Search</button>
+		</form>
+	</div>
+	
+
 
 	<ul class="nav navbar-nav navbar-right">
 	  <!--
