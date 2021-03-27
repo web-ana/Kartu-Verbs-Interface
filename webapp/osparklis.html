@@ -185,6 +185,8 @@
 	    </span>
 	  </li>
 	</ul>
+
+
 	
 	<div class="container-fluid col-sm-4 nav-middle">
 		<form id="nav-search" class="d-flex">
@@ -195,7 +197,7 @@
 	
 
 
-	<ul class="nav navbar-nav navbar-right">
+	<ul class="nav navbar-nav navbar-right" style="margin-right: 1em;">
 	  <!--
 	  <li class="dropdown">
 	    <a class="dropdown-toggle" data-toggle="dropdown">
@@ -331,6 +333,11 @@
 	      </li>
 	      -->
 	    </ul>
+	  </li>
+	  <li>
+		<div class=" navbar-right translate" title="Translate this page in your preferred language">  
+			<div id="google_translate_element"></div> 
+		</div>
 	  </li>
 	</ul>
       </div>
@@ -1668,5 +1675,24 @@
     <span class="texte lang-es"> para más información.</span>
     <span class="texte lang-nl"> voor meer informatie</span>
   </footer>
+
+    <!-- Ana - google translate script -->
+
+
+	<script type="text/javascript"> 
+		function googleTranslateElementInit() { 
+			new google.translate.TranslateElement(
+				{pageLanguage: 'en'}, 
+				'google_translate_element'
+			); 
+		}   
+	</script> 
+  
+	<script type="text/javascript" src=
+	"https://translate.google.com/translate_a/element.js?
+		cb=googleTranslateElementInit">
+	</script> 
+
+
 </body>
 </html>
