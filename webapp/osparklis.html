@@ -231,7 +231,7 @@
 
 	
 	
-	<div class="container-fluid col-sm-4 nav-middle">
+	<div class="container-fluid col-sm-3 nav-middle">
 		<form id="nav-search" class="d-flex">
 			<input class="form-control me-2" type="search" placeholder="Type here ..." aria-label="Search">
 			<button class="btn btn-outline-success" type="submit">Search</button>
@@ -1055,7 +1055,7 @@
 
 
 <div id="control-navig" class="navbar" data-spy="affix" data-offset-top="75">
-  <div class="nav navbar-nav navbar-left">
+  <div class="nav navbar-nav navbar-left" style="margin-left: 1em;">
     <span class="btn-group">
       <button id="button-home" class="btn btn-primary btn-md navbar-btn">
 	<span class="tooltiped">
@@ -1095,15 +1095,15 @@
       </button>
     </span>
 
-    <span class="tooltiped">
+    <!-- <span class="tooltiped">
       <span class="tooltip lang-en">Click to display the permanent link to the current view</span>
       <span class="tooltip lang-fr">Cliquer pour afficher le lien permanent vers la vue actuelle</span>
       <span class="tooltip lang-es">Haga clic para mostrar el enlace permanente a la vista actual</span>
       <span class="tooltip lang-nl">Klik om de permanente link naar de huidige weergave weer te geven </span>
       <button id="permalink" class="btn btn-info btn-md navbar-btn">Permalink</button>
-    </span>
+    </span> -->
 
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
       <label  id="button-sparklis-view" class="btn btn-default btn-md navbar-btn active">
 	<input type="radio" name="options" autocomplete="off" checked>
 	Sparklis
@@ -1119,7 +1119,7 @@
 	<span class="texte lang-es">Historial</span>
 	<span class="texte lang-nl">Geschiedenis</span>
       </label>
-    </div>
+    </div> -->
 
   </div>
 </div>
@@ -1128,7 +1128,9 @@
 
   <div id="sparklis-view" class="panel-group">
 
-    <div id="increments" class="panel panel-info">
+
+	<!-- display: none -->
+    <div id="increments" class="panel panel-info" style="display: none;">
       <div class="panel-heading">
 	<!--	<button id="show-hide-increments" class="btn btn-default btn-md"><span class="glyphicon glyphicon-collapse-up"></span></button> -->
 	<h5 class="panel-title">
@@ -1718,6 +1720,8 @@
     <span class="texte lang-es"> para más información.</span>
     <span class="texte lang-nl"> voor meer informatie</span>
   </footer>
+
+
 
     <!-- Ana - google translate script -->
 

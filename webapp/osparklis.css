@@ -414,7 +414,8 @@ input:checked + .slider {
   background-color: white;
 }
 
-/*input:focus + .slider {
+/*input:focus
+ + .slider {
   box-shadow: 0 0 2px red;
 }*/
 
@@ -450,4 +451,16 @@ input:checked + .slider:before {
 
 .nav-middle {
     margin-left: 30em;
+}
+
+tr:nth-child(even) {
+    background-color: #eef7ff;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #64a3da;
+
+    border: 2px solid #4692d4 ;
+
 }
